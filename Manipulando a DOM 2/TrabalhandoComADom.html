@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabalhando Com A Dom</title>
+</head>
+<body>
+    <div id = 'app'>
+        <input type="text" name = 'nome' id = 'nome' class = 'nome'/>
+        <button class= 'botao'>adicionar</button>
+    </div>
+    <script>
+        var inputElement = document.querySelector('input.nome'); // estamos atribuindo uma variavel para o input e seus elements
+        var btnElement = document.querySelector('button.botao');  // aqui está sendo usado ponto, pois 'botao e uma classe de Button'
+        // var input.Element = document.querySelector('div#app input'); 
+        // caso tenha mais de um input e queira referenciar o input ou o elemento 
+        // pelo nome basta ('div#app input[name = nome] ')
+
+        btnElement.onclick = function(){
+            var text = inputElement.value; // essa váriavel está declarada para pegar o valor, do que foi digitado no input 
+            alert(text);
+        }
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lidando Com Elementos</title>
+</head>
+<body>
+    <div id = 'app'>
+    </div>
+    <script>
+        var linkElement = document.createElement('a'); // Estamos usando create element para criar um element
+        // e atribuindo ele a variavel, linkElement  // O ('a') e utilizado no html para criar links. 
+
+        linkElement.setAttribute('href', 'http://www.google.com.br');
+        var textElement = document.createTextNode('Acessar o Google') // Aqui criamos outro elemento para o texto 
+
+        // agora precisamos posicionar o texto dentro do elemento com o link
+        linkElement.appendChild(textElement); // aqui estamos adicionando o LINKELEMENT como um filho de TEXT ELEMENT
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement) // aqui estamos dizendo que a div app está recebendo a variavel 
+        // containerElement e ela será um parent Linkelement
+    </script>
+</body>
+</html>

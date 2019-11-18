@@ -1,0 +1,49 @@
+Crie uma função que dado o objeto a seguir:
+var endereco = {
+ rua: "Rua dos pinheiros",
+ numero: 1293,
+ bairro: "Centro",
+ cidade: "São Paulo",
+ uf: "SP"
+};
+Retorne o seguinte conteúdo:
+O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
+nº 1293.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EX1</title>
+</head>
+<body>
+    <script>
+       // primeira maneira de resolver 
+       var endereco1 = ['Rua dos pinheiros', 1293, 'Centro', 'São Paulo', 'SP' ];
+        
+        console.log('O usúario mora em ' +endereco1[3], ' / ' +endereco1[4], 'no bairro ' +endereco1[2], 'na rua ' +endereco1[0], 'com o n ' +endereco1[1]  )
+        
+        // Segunda maneira de resolver
+        
+        var endereco =  { 
+            rua: "Rua dos pinheiros",
+            número: 1293,
+            bairro: 'Centro',
+            cidade: 'São Paulo',
+            uf: "SP"
+
+        };
+        
+        console.log (`O usuario mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com o n ${endereco.número}.`)
+        
+        
+        // Terceira maneira de resolver 
+     var endereco2 = ['Rua dos pinheiros', 1293, ' Centro', 'São Paulo', 'SP'];
+        console.log(`O usúario mora em ${endereco2[3]} / ${endereco2[4]} no bairro ${endereco2[2]} na rua ${endereco2[0]} com o n ${endereco2[1]}  ` );
+
+    </script>
+
+    
+</body>
+</html>

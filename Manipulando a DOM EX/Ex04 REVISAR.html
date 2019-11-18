@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex03</title>
+</head>
+<ul></ul>
+<input type="text" name = "nome" onfocus="this.value = '' "> <!-- Aqui usamos onFocus para apagar o input após ser escrito. -->
+<!-- Testar Placee hoder.-->
+<button onclick="adicionar()">Adicionar</button>
+<body>
+    <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    var ulElement = document.querySelector('ul');
+
+    function adicionar() {
+        var inputElement = document.querySelector('input');
+        var inputElementtext = inputElement.value; 
+
+       var addElement = document.createElement('li');
+       var addElementText = document.createTextNode(inputElementtext);
+
+        addElement.appendChild(addElementText);
+        ulElement.appendChild(addElement);
+       
+    }
+
+    for (nome of nomes) {
+        var liElement = document.createElement('li');
+        var textElement = document.createTextNode(nome);
+        
+        liElement.appendChild(textElement);
+        ulElement.appendChild(liElement);
+        
+    }
+
+    
+    </script>
+    
+</body>
+</html>
